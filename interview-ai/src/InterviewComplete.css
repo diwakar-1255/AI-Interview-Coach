@@ -1,0 +1,424 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --success-color: #2ecc71;
+  --danger-color: #e74c3c;
+  --text-color: #333;
+  --muted-text: #7f8c8d;
+  --background-light: #f8f9fa;
+  --border-radius: 10px;
+  --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --spacing-unit: 1rem;
+  --transition-speed: 0.3s;
+}
+
+.interview-complete-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: calc(var(--spacing-unit) * 2);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  padding: var(--spacing-unit) 0;
+  
+  h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: var(--muted-text);
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Performance Summary */
+.performance-summary {
+  background: var(--background-light);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit) * 1.5);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  box-shadow: var(--box-shadow);
+  
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+
+.score-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-unit);
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.score-card {
+  background: white;
+  border-radius: calc(var(--border-radius) - 2px);
+  padding: calc(var(--spacing-unit) * 1.5);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  transition: transform var(--transition-speed) ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.score-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.score-label {
+  font-size: 1rem;
+  color: var(--muted-text);
+  margin-bottom: var(--spacing-unit);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.score-progress {
+  height: 10px;
+  background: #ecf0f1;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-color), var(--success-color));
+  border-radius: 5px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Feedback Section */
+.feedback-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-unit);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.strengths-card, .improvements-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit) * 1.5);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+  }
+}
+
+.strengths-card {
+  &::before { background: var(--success-color); }
+}
+
+.improvements-card {
+  &::before { background: var(--danger-color); }
+}
+
+.strengths-card h3, .improvements-card h3 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-unit);
+  font-size: 1.4rem;
+}
+
+.strengths-card ul, .improvements-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.strengths-card li, .improvements-card li {
+  padding: var(--spacing-unit);
+  margin-bottom: calc(var(--spacing-unit) / 2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: transform var(--transition-speed) ease;
+  
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+
+.strengths-card li {
+  background: rgba(var(--success-color), 0.08);
+}
+
+.improvements-card li {
+  background: rgba(var(--danger-color), 0.08);
+}
+
+.strength-icon, .improvement-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: 50%;
+  margin-right: 0.8em;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.strength-icon {
+  background: var(--success-color);
+  color: white;
+}
+
+.improvement-icon {
+  background: var(--danger-color);
+  color: white;
+}
+
+/* Question Review */
+.question-review {
+  background: var(--background-light);
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit) * 1.5);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+
+.questions-list {
+  display: grid;
+  gap: var(--spacing-unit);
+}
+
+.question-item {
+  background: white;
+  border-radius: calc(var(--border-radius) - 2px);
+  padding: var(--spacing-unit);
+  box-shadow: var(--box-shadow);
+  page-break-inside: avoid;
+}
+
+.question-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-unit);
+  cursor: pointer;
+  padding: calc(var(--spacing-unit) / 2);
+  
+  .question-number {
+    background: var(--secondary-color);
+    color: white;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+  
+  .question-text {
+    margin: 0;
+    flex-grow: 1;
+    font-size: 1.1rem;
+  }
+  
+  .dropdown-icon {
+    color: var(--muted-text);
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  &:hover .dropdown-icon {
+    transform: translateY(2px);
+  }
+}
+
+.collapsible-content {
+  margin-top: var(--spacing-unit);
+  border-left: 3px solid var(--success-color);
+  padding-left: var(--spacing-unit);
+}
+
+.feedback-content, .suggestion-content {
+  background: var(--background-light);
+  padding: var(--spacing-unit);
+  border-radius: calc(var(--border-radius) - 4px);
+  margin: var(--spacing-unit) 0;
+  
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.suggestion-content {
+  border-left: 3px solid var(--secondary-color);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-unit);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.btn-download, .btn-restart, .btn-home {
+  padding: 0.8em 1.5em;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-download {
+  background: var(--secondary-color);
+  color: white;
+  
+  &:hover {
+    background: #2980b9;
+  }
+}
+
+.btn-restart {
+  background: var(--success-color);
+  color: white;
+}
+
+.btn-home {
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--background-light);
+  
+  &:hover {
+    border-color: var(--secondary-color);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --spacing-unit: 0.75rem;
+  }
+  
+  .header-section h1 {
+    font-size: 2rem;
+  }
+  
+  .score-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .question-header {
+    flex-wrap: wrap;
+    
+    .question-text {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Add to your InterviewComplete.css */
+/* Ensure all content is visible for PDF */
+@media print {
+  body, html {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  .interview-complete-container {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  .questions-list {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* PDF generation helper styles */
+.pdf-generation {
+  .question-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .collapsible-content {
+    display: block !important;
+    opacity: 1 !important;
+    height: auto !important;
+  }
+  .question-header {
+    cursor: text !important;
+  }
+  
+  .dropdown-icon {
+    display: none !important;
+  }
+  
+  .action-buttons {
+    display: none !important;
+  }
+  
+  /* Ensure proper spacing in PDF */
+  .performance-summary,
+  .feedback-section,
+  .question-review {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  /* Improve readability in print */
+  .score-card, .strengths-card, .improvements-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+  
+  /* Force colors in print */
+  .progress-bar {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

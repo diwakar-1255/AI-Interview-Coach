@@ -1,0 +1,266 @@
+/* ===== MAIN CONTAINER ===== */
+.auth-container {
+  max-width: 440px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.auth-container:hover {
+  transform: translateY(-2px);
+}
+
+/* ===== TITLE ===== */
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.6rem;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+
+/* ===== SUBTEXT ===== */
+.auth-subtext,
+.otp-info {
+  text-align: center;
+  margin-bottom: 14px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ===== FORM GROUP ===== */
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ===== INPUT FIELD ===== */
+.form-control {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  background: #f9fafb;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #3498db;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* ===== ERROR ===== */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+.general-error {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  padding: 0.7rem;
+  background: rgba(231, 76, 60, 0.08);
+  border-radius: 8px;
+}
+
+/* ===== SUCCESS ===== */
+.success-message {
+  color: #27ae60;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  padding: 0.7rem;
+  background: rgba(39, 174, 96, 0.08);
+  border-radius: 8px;
+}
+
+.general-success {
+  text-align: center;
+}
+
+/* ===== BUTTON ===== */
+.auth-button {
+  width: 100%;
+  padding: 0.85rem;
+  background: linear-gradient(135deg, #3498db, #2c82c9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 0.2rem;
+}
+
+.auth-button:hover {
+  background: linear-gradient(135deg, #2c82c9, #2166a5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(44, 130, 201, 0.25);
+}
+
+.auth-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== FORGOT PASSWORD ===== */
+.forgot-password-wrapper {
+  text-align: right;
+  margin-top: -0.4rem;
+  margin-bottom: 1rem;
+}
+
+.forgot-password-link {
+  font-size: 0.9rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.forgot-password-link:hover {
+  color: #2166a5;
+  text-decoration: underline;
+}
+
+/* ===== OTP SECTION ===== */
+.otp-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px 0;
+  flex-wrap: nowrap;
+}
+
+/* ===== OTP INPUT ===== */
+.otp-input {
+  width: 48px;
+  height: 54px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.25s ease;
+  background: #f9fafb;
+  box-sizing: border-box;
+}
+
+.otp-input:focus {
+  border-color: #3498db;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  transform: scale(1.05);
+}
+
+.otp-input:not(:placeholder-shown) {
+  border-color: #2ecc71;
+}
+
+/* ===== RESEND ===== */
+.resend-text {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.resend-active {
+  color: #3498db;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.resend-active:hover {
+  text-decoration: underline;
+  color: #2166a5;
+}
+
+/* ===== FOOTER LINKS ===== */
+.auth-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: #555;
+}
+
+.auth-footer a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== PROFILE DIVIDER ===== */
+.profile-divider {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ===== PROFILE SECTION TITLE ===== */
+.section-title {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* ===== SMALL INFO TEXT ===== */
+.info-text {
+  font-size: 0.88rem;
+  color: #718096;
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 1rem;
+    padding: 1.5rem;
+    max-width: unset;
+  }
+
+  .auth-container h2 {
+    font-size: 1.45rem;
+  }
+
+  .otp-input {
+    width: 42px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+
+  .auth-button {
+    padding: 0.8rem;
+  }
+}
