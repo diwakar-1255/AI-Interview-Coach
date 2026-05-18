@@ -78,16 +78,3 @@ It helps users improve:
 6. Emotion analysis via Vertex AI
 7. Results stored in BigQuery
 8. Dashboard shows insights and scores
-
----
-
-## 📊 High-Level Architecture
-
-```text
-[Frontend (React.js)]  -->  [Backend (Flask/FastAPI)]
-        |                          |
-[Speech-to-Text API]           [Cloud Storage]
-        |                          |
-[Gemini AI]  -->  [Vertex AI Vision]
-        |                          |
-[BigQuery]   -->   [Analytics Dashboard]
